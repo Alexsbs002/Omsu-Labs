@@ -6,7 +6,7 @@
 using namespace std;
 #define g 9.8066 //определение константы
 
-double CorrectNumber(string x) { // проверка на ввод положительного числа >=0
+double PositiveInt(string x) { // проверка на ввод положительного числа >=0
     double n;
     while (true)
     {
@@ -33,8 +33,8 @@ int main()
 {
     double H, U, T, S;
     
-    H = CorrectNumber("Enter Height of plane: ");
-    U = CorrectNumber("Enter speed of plane: ");
+    H = PositiveInt("Enter Height of plane: ");
+    U = PositiveInt("Enter speed of plane: ");
 
     //расчет
     T = sqrt(2 * H / g);
