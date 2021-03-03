@@ -1,4 +1,4 @@
-﻿// ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //Мирко Александр СБС-002 ЛАБ 1 ВАР 5
 
 #include <iostream>
@@ -6,15 +6,35 @@
 using namespace std;
 #define g 9.8066 //определение константы
 
+double CorrectNumber(string x) { // проверка на ввод положительного числа >=0
+    double n;
+    while (true)
+    {
+        cout << x;
+        cin >> n;
+        if (!cin || n < 0)
+        {
+            if(!cin)
+                cout << "Enter The Number!\n"; 
+            if (n < 0)
+                cout << "Well done, now enter The Positive Number!\n";
+            
+            cin.clear();
+            while (cin.get() != '\n');
+        }
+        else {
+            break;
+        }
+    }
+    return n;
+}
+
 int main()
 {
     double H, U, T, S;
-    //ввод
-    std::cout << "Enter the height of plane: \n";
-    cin >> H;
-
-    std::cout << "Enter the speed of plane: \n";
-    cin >> U;
+    
+    H = CorrectNumber("Enter Height of plane: ");
+    U = CorrectNumber("Enter speed of plane: ");
 
     //расчет
     T = sqrt(2 * H / g);
@@ -22,21 +42,10 @@ int main()
 
 
     //вывод
-    std::cout << "S to drop the bomb from plane: "<< S;
-    std::cout << "\n";
+    cout << "S to drop the bomb from plane: "<< S;
+    cout << "\n";
     system("pause");
     return 0;
 
 
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
