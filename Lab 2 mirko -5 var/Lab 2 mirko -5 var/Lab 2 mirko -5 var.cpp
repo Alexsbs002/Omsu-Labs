@@ -20,7 +20,7 @@ double PositiveInt(string x) { // проверка на ввод положит�
                 cout << "Enter The Number!\n";
             }
             if (t >= 1 || t <= 0){
-                cout << "enter Number from -1 to 1!\n";
+                cout << "enter Number from 0 to 1!\n";
             }
 
             cin.clear();
