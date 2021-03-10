@@ -16,10 +16,12 @@ double PositiveInt(string x) { // проверка на ввод положит�
         cin >> t;
         if (!cin || t <= -1 || t >= 1)
         {
-            if (!cin)
+            if (!cin){
                 cout << "Enter The Number!\n";
-            if (t <= -1 || t >= 1)
+            }
+            if (t <= -1 && t >= 1){
                 cout << "enter Number from -1 to 1!\n";
+            }
 
             cin.clear();
             while (cin.get() != '\n');
