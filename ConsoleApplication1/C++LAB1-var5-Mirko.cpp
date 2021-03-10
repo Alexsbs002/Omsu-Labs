@@ -15,9 +15,13 @@ double PositiveInt(string x) { // проверка на ввод положит�
         if (!cin || n < 0)
         {
             if(!cin)
+                {
                 cout << "Enter The Number!\n"; 
+                }
             if (n < 0)
+                {
                 cout << "Well done, now enter The Positive Number!\n";
+                }
             
             cin.clear();
             while (cin.get() != '\n');
