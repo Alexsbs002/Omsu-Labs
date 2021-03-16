@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <clocale>
@@ -22,7 +22,7 @@ double CorrectNumber() { // проверка ввода
     return n;
 }
 
-int CorrectNumber02() { // проверка ввода 0 или 1
+int CorrectNumber02() { // проверка ввода
     int n;
     while (true)
     {
