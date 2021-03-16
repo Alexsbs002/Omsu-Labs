@@ -22,7 +22,7 @@ double CorrectNumber() { // проверка ввода
     return n;
 }
 
-int CorrectNumber02() { // проверка ввода  0 или 1
+int CorrectNumber02() { // проверка ввода
     int n;
     while (true)
     {
@@ -68,10 +68,12 @@ int main()
 
     }
     else { // ввод автоматически
-        srand(time(0));
+        srand(time(0)); int f;
+        cout << "Введите диапозон значений генерации - ";
+        f = CorrectNumber(); // ввод диапозона
         for (int i = 0; i < n; i++) { // ввод элементов автомат
             for (int j = 0; j < n; j++) {
-                a[i][j] = rand() % 20;
+                a[i][j] = rand() % f - (f/2);
             }
         }
     }
