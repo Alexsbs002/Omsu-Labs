@@ -22,7 +22,7 @@ double CorrectNumber() { // проверка ввода
     return n;
 }
 
-int CorrectNumber02() { // проверка ввода
+int CorrectNumber02() { // проверка ввода  0 или 1
     int n;
     while (true)
     {
