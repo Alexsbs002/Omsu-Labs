@@ -13,7 +13,7 @@ double CorrectNumber() { // проверка ввода
         {
             cout << "Ошибка ввода - введите число!\n";
             cin.clear();
-            while (cin.get() != '\n');
+            
         }
         else {
             break;
@@ -32,12 +32,12 @@ int CorrectNumber02() { // проверка ввода
             if (!cin){
             cout << "Ошибка ввода - введите число!\n";
             cin.clear();
-            while (cin.get() != '\n');
+            
             }
             if (n != 0 && n != 1) {
                 cout << "Ошибка ввода - введите число 0 или 1 !\n";
                 cin.clear();
-                while (cin.get() != '\n');
+                
             }
         }
         else {
