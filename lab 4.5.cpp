@@ -5,7 +5,7 @@
 #include <cmath>
 using namespace std;
 
-int EnterCheck(string x) {
+int EnterCheck(string x) { // проверка ввода
     int n = 0;
     while (true)
     {
