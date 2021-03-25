@@ -1,11 +1,11 @@
-﻿// lab 4.5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// lab 4.5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
 #include <cmath>
 using namespace std;
 
-int EnterCheck(string x) { 
+int EnterCheck(string x) {
     int n = 0;
     while (true)
     {
@@ -21,15 +21,15 @@ int EnterCheck(string x) {
     return n;
 }
 
-int Primer(x,end){
+int Primer(int x, int end) {
     double y = 0;
     int factMaxNumber = 2, degree = 2;
     for (int n = 0; n < end; n++) {
         double fact = 1;
-            for (int n = 1; n <= factMaxNumber; n++) {
-                fact = fact * n;
-            }
-            factMaxNumber = factMaxNumber + 2;
+        for (int n = 1; n <= factMaxNumber; n++) {
+            fact = fact * n;
+        }
+        factMaxNumber = factMaxNumber + 2;
         y = y + (pow(x, degree) / fact);
         degree = degree + 2;
     }
@@ -43,8 +43,9 @@ int main()
     setlocale(LC_ALL, "Russian");
     int x = EnterCheck("Введите x: ");
     int end = EnterCheck("Введите границу ряда: ");
-    Primer(x,end);
+    Primer(x, end);
+
     
-    
+
     return 0;
 }
