@@ -21,12 +21,7 @@ int EnterCheck(string x) {
     return n;
 }
 
-int main()
-{
-    setlocale(LC_ALL, "Russian");
-    int x = EnterCheck("Введите x: ");
-    int end = EnterCheck("Введите границу ряда: ");
-
+int Primer(x,end){
     double y = 0;
     int factMaxNumber = 2, degree = 2;
     for (int n = 0; n < end; n++) {
@@ -40,6 +35,16 @@ int main()
     }
     double res = y + 1;
     cout << "\n" << "Гиперболический косинус x с границей ряда " << end << " = " << res;
+    return res;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int x = EnterCheck("Введите x: ");
+    int end = EnterCheck("Введите границу ряда: ");
+    Primer(x,end);
+    
     
     return 0;
 }
