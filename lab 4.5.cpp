@@ -21,7 +21,7 @@ int EnterCheck(string x) { // проверка ввода
     return n;
 }
 
-int GipCosius(int x, int end) {
+int GipCosius(int x, int end) { //расчитывает косинус
     double y = 0;
     int factMaxNumber = 2, degree = 2;
     for (int n = 0; n < end; n++) {
