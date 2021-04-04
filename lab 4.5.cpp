@@ -5,47 +5,46 @@
 #include <cmath>
 using namespace std;
 
-int EnterCheck(string x) { // проверка ввода
+int EnterCheck() {
     int n = 0;
     while (true)
     {
-        cout << x;
-        cin >> n;
-        if (!cin)
+        if (!(cin >> n)) 
         {
             cout << "Введите еще раз\n";
             cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
         else break;
     }
     return n;
 }
 
-int GipCosius(int x, int end) { //расчитывает косинус
-    double y = 0;
-    int factMaxNumber = 2, degree = 2;
-    for (int n = 0; n < end; n++) {
-        double fact = 1;
-        for (int n = 1; n <= factMaxNumber; n++) {
-            fact = fact * n;
-        }
-        factMaxNumber = factMaxNumber + 2;
-        y = y + (pow(x, degree) / fact);
-        degree = degree + 2;
-    }
-    double res = y + 1;
-    cout << "\n" << "Гиперболический косинус x с границей ряда " << end << " = " << res;
-    return res;
-}
-
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    int x = EnterCheck("Введите x: ");
-    int end = EnterCheck("Введите границу ряда: ");
-    GipCosius(x, end);
 
-    
+    cout << "введите границу ряда \n";
+    int max = EnterCheck();
 
+    cout << "введите число x \n";
+    int x = EnterCheck();
+
+    double y = 0;
+    for (int n = 0; n <= max; n++)
+    {
+        double resUP = pow(x, 2 * n);//вычисление числителя
+
+        double resDOWN = 1;
+            for (int d = 1; d <= 2 * n; d++)
+            {
+                resDOWN = resDOWN * d;//вычисление знаменателя
+            }
+
+        y = y + resUP / resDOWN;//сумма значений
+
+    }
+
+    cout << "\n" << "результат вычислений косинуса = " << y;
     return 0;
 }
