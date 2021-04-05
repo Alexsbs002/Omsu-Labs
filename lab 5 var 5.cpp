@@ -1,5 +1,5 @@
 ﻿// lab 4.5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//обратный порядок строки функция reverce - http://espressocode.top/stdreverse-in-c/
+//обратный порядок строки функция reverce - http://espressocode.top/stdreverse-in-c/ - http://espressocode.top/getline-string-c/
 
 #include <iostream>
 #include <string>
