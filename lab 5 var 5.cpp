@@ -2,21 +2,22 @@
 //обратный порядок строки функция reverce - http://espressocode.top/stdreverse-in-c/ ; getline - http://espressocode.top/getline-string-c/
 
 #include <iostream>
-#include <string>
-#include <algorithm>
+#include <cstdio>
 using namespace std;
 
 int main()
 {
-    
-
-    string str;
-    cout << "Enter the string: ";
-    getline(cin, str);//чтение строки из потока
-
-    reverse(str.begin(), str.end());
-    //меняет порядок элементов в заданном диапозоне, можно писать begin->begin()+2
-    cout << "your string, but it reverced: " << str << endl;
-    
+	char begin[100];
+	begin[99] = '\0';
+	char end[100];
+	cout << "Enter str: ";
+	gets_s(begin);
+	int len = strlen(begin);
+	for (int i = 0, j = len - 1; i < len; i++, j--)
+	{
+		end[i] = begin[j];
+	}
+	end[len] = '\0';
+	cout << "\n Reverce str = " << end;
     return 0;
 }
