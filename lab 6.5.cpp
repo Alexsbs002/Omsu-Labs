@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 struct three
@@ -80,11 +81,13 @@ int main()
 	cout << endl;
 	for (int i = 0; i < size; i++)
 	{
-		
-		cout << "Введите " << i + 1 << " элемент: " ;
+		for (int e = 0; e < pow(3,i); e++)
+		{ 
+		cout << "Введите " << e + 1 << " элемент " << i+1 << " уровня дерева: ";
 		cin >> element;
 		number.Add(element, Root);
-	
+		}
+		cout << endl;
 	}
 	cout << endl;
 	number.is_Empty(Root);
