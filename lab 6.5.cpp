@@ -27,14 +27,17 @@ struct three
 			if (aThree->Data > aData)
 			{
 				Add(aData, aThree->LeftThree);
+				
 			}
 			else if (aThree->Data < aData)
 			{
 				Add(aData, aThree->RightThree);
+				
 			}
 			else if (aThree->Data == aData)
 			{
 				Add(aData, aThree->MiddleThree);
+				
 			}
 		}
 	}
@@ -72,14 +75,18 @@ int main()
 	int size;
 	int element;
 
-	cout << "Введите кол-во элементов для будущего дерева: ";
+	cout << "Введите кол-во уровней для будущего дерева: ";
 	cin >> size;
 	cout << endl;
 	for (int i = 0; i < size; i++)
 	{
-		cout << "Введите " << i + 1 << " элемент: ";
+		for (int e = 0; e < 3; e++)
+		{ 
+		cout << "Введите " << e + 1 << " элемент " << i+1 << " уровня дерева: ";
 		cin >> element;
 		number.Add(element, Root);
+		}
+		cout << endl;
 	}
 	cout << endl;
 	number.is_Empty(Root);
