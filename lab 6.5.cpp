@@ -80,13 +80,11 @@ int main()
 	cout << endl;
 	for (int i = 0; i < size; i++)
 	{
-		for (int e = 0; e < 3; e++)
-		{ 
-		cout << "Введите " << e + 1 << " элемент " << i+1 << " уровня дерева: ";
+		
+		cout << "Введите " << i + 1 << " элемент: " ;
 		cin >> element;
 		number.Add(element, Root);
-		}
-		cout << endl;
+	
 	}
 	cout << endl;
 	number.is_Empty(Root);
